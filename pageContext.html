@@ -89,38 +89,65 @@
 </li>
 </ul>
 <h2 id="custom">Custom</h2>
-<p>You can define custom <code>pageContext</code> properties at:</p>
+<p>You can define custom <code>pageContext</code> properties.</p>
 <ul>
-<li>Hooks <a href="/onBeforeRender"><code>onBeforeRender()</code></a> and <a href="/render"><code>render()</code></a>.<!-- -->
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRender</span><span style="color:#24292F">() {</span></span>
+<li>Using the <a href="/onBeforeRender"><code>onBeforeRender()</code></a> hook:<!-- -->
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRender</span><span style="color:#24292F">() {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Custom `pageContext` properties</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ***************************************</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// **** Custom pageContext properties ****</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ***************************************</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Common use case: make fetched data available over pageContext</span></span>
+<span class="line"><span style="color:#24292F">      someData: { product: { id: </span><span style="color:#0550AE">123</span><span style="color:#24292F">, name: </span><span style="color:#0A3069">&#x27;MacBook&#x27;</span><span style="color:#24292F"> } }</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Or any other custom property you want</span></span>
 <span class="line"><span style="color:#24292F">      someCustomProp: </span><span style="color:#0A3069">&#x27;some-value&#x27;</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">render</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    documentHtml: </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;&lt;!--...--&gt;&lt;/html&gt;`</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Custom `pageContext` properties</span></span>
-<span class="line"><span style="color:#24292F">      someCustomProp: </span><span style="color:#0A3069">&#x27;some-value&#x27;</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<blockquote>
+<p>A common use case for <code>onBeforeRender()</code> is to fetch data: <a href="/data-fetching">Guides<!-- --> &gt; <!-- -->Data Fetching</a>.</p>
+</blockquote>
 </li>
-<li>Server middleware.<!-- -->
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// Server middleware</span></span>
-<span class="line"><span style="color:#24292F">app.</span><span style="color:#8250DF">get</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span><span style="color:#953800">req</span><span style="color:#24292F">, </span><span style="color:#953800">res</span><span style="color:#24292F">, </span><span style="color:#953800">next</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
+<li>At your <a href="/renderPage">vite-pugin-ssr server middleware</a>:<!-- -->
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#24292F">app.</span><span style="color:#8250DF">get</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span><span style="color:#953800">req</span><span style="color:#24292F">, </span><span style="color:#953800">res</span><span style="color:#24292F">, </span><span style="color:#953800">next</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContextInit</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">    urlOriginal: req.url,</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Custom `pageContext` properties</span></span>
-<span class="line"><span style="color:#24292F">    someCustomProp: </span><span style="color:#0A3069">&#x27;some-value&#x27;</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// ***************************************</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// **** Custom pageContext properties ****</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// ***************************************</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Common use case: make information about logged-in user available over pageContext</span></span>
+<span class="line"><span style="color:#24292F">    user: req.user,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Common use case: make the cookies available over pageContext.headers.cookies</span></span>
+<span class="line"><span style="color:#24292F">    headers: req.headers,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Or any other custom property you want</span></span>
+<span class="line"><span style="color:#24292F">    someCustomProp: </span><span style="color:#0A3069">&#x27;some-value&#x27;</span><span style="color:#24292F">,</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderPage</span><span style="color:#24292F">(pageContextInit)</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">/* ... */</span></span>
 <span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<blockquote>
+<p>A common use case is to integrate authentication tools: <a href="/auth">Integration<!-- --> &gt; <!-- -->Authentication</a>.</p>
+</blockquote>
+</li>
+<li>Using the <a href="/render"><code>render()</code></a> hook:<!-- -->
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">render</span><span style="color:#24292F">() {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    documentHtml: </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;&lt;!--...--&gt;&lt;/html&gt;`</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ***************************************</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// **** Custom pageContext properties ****</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ***************************************</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Common use case: make the state management&#x27;s initial store state available</span></span>
+<span class="line"><span style="color:#24292F">      initialStoreState: pageRendered.store.state,</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Or any other custom property you want</span></span>
+<span class="line"><span style="color:#24292F">      someCustomProp: </span><span style="color:#0A3069">&#x27;some-value&#x27;</span></span>
+<span class="line"><span style="color:#24292F">    }</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<blockquote>
+<p>A common use case is to integrate state management tools: <a href="/store">Integration<!-- --> &gt; <!-- -->Data Store</a>.</p>
+</blockquote>
 </li>
 </ul>
 <h2 id="anywhere">Anywhere</h2>

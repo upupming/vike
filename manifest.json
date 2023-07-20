@@ -163,6 +163,7 @@
       "pages/prerender-config.page.server.mdx?extractAssets&lang.mdx",
       "pages/prerender-programmatic.page.server.mdx?extractAssets&lang.mdx",
       "pages/prerender.page.server.mdx?extractAssets&lang.mdx",
+      "pages/primereact.page.server.mdx?extractAssets&lang.mdx",
       "pages/pullstate.page.server.mdx?extractAssets&lang.mdx",
       "pages/react-query.page.server.mdx?extractAssets&lang.mdx",
       "pages/react-tour.page.server.mdx?extractAssets&lang.mdx",
@@ -217,7 +218,7 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.21.5/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-server-routing.9535cddc.js",
+    "file": "assets/entries/entry-server-routing.af5e3fd5.js",
     "imports": [
       "_chunk-289eaa7e.js"
     ],
@@ -364,6 +365,7 @@
       "pages/prerender-config.page.server.mdx?extractAssets&lang.mdx",
       "pages/prerender-programmatic.page.server.mdx?extractAssets&lang.mdx",
       "pages/prerender.page.server.mdx?extractAssets&lang.mdx",
+      "pages/primereact.page.server.mdx?extractAssets&lang.mdx",
       "pages/pullstate.page.server.mdx?extractAssets&lang.mdx",
       "pages/react-query.page.server.mdx?extractAssets&lang.mdx",
       "pages/react-tour.page.server.mdx?extractAssets&lang.mdx",
@@ -418,7 +420,7 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.21.5/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-client-routing.0ca53381.js",
+    "file": "assets/entries/entry-client-routing.c3ab06ac.js",
     "imports": [
       "_chunk-289eaa7e.js"
     ],
@@ -1310,6 +1312,12 @@
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "pages/prerender.page.server.mdx?extractAssets&lang.mdx"
+  },
+  "pages/primereact.page.server.mdx?extractAssets&lang.mdx": {
+    "file": "assets/entries/pages_primereact.page.server.extractAssets.4ed993c7.js",
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "pages/primereact.page.server.mdx?extractAssets&lang.mdx"
   },
   "pages/pullstate.page.server.mdx?extractAssets&lang.mdx": {
     "file": "assets/entries/pages_pullstate.page.server.extractAssets.4ed993c7.js",

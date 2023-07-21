@@ -35,7 +35,7 @@
 </li>
 </ul>
 <h2 id="react">React</h2>
-<p>Rendering &amp; loading a compoment only on the client-side:</p>
+<p>Rendering &amp; loading a component only on the client-side:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/location/select.page.jsx</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> React </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;react&#x27;</span></span>
@@ -56,7 +56,7 @@
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> [</span><span style="color:#0550AE">Component</span><span style="color:#24292F">, </span><span style="color:#0550AE">setComponent</span><span style="color:#24292F">] </span><span style="color:#CF222E">=</span><span style="color:#24292F"> React.</span><span style="color:#8250DF">useState</span><span style="color:#24292F">(() </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> Loading)</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// useEffect() callbacks are only run in the browser, consequently the map component</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// is loaded and rendererd only in the browser.</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// is loaded and rendered only in the browser.</span></span>
 <span class="line"><span style="color:#24292F">  React.</span><span style="color:#8250DF">useEffect</span><span style="color:#24292F">(() </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// @ts-expect-error The type provided by @types/react is wrong</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">setComponent</span><span style="color:#24292F">(() </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> React.</span><span style="color:#8250DF">lazy</span><span style="color:#24292F">(() </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#CF222E">import</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;some-heavy-map-component&#x27;</span><span style="color:#24292F">)))</span></span>

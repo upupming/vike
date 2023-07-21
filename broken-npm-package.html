@@ -26,7 +26,7 @@
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
 <blockquote>
-<p>The reason why many npm packages contain erronous code is because frameworks like Next.js transpile the server-side code of npm packages. (Whereas Vite lets Node.js directly execute npm packages in order to improve DX speed: Vite transpiles only what is strictly needed). Where Next.js is permissive and is able to process invalid code, Node.js is strict and crashes upon invalid code. By adding npm packages to <a href="https://vitejs.dev/config/ssr-options.html#ssr-noexternal"><code>vite.config.js &gt; ssr.noExternal</code></a> we replicate the behavior of frameworks like Next.js.</p>
+<p>The reason why many npm packages contain erroneous code is because frameworks like Next.js transpile the server-side code of npm packages. (Whereas Vite lets Node.js directly execute npm packages in order to improve DX speed: Vite transpiles only what is strictly needed). Where Next.js is permissive and is able to process invalid code, Node.js is strict and crashes upon invalid code. By adding npm packages to <a href="https://vitejs.dev/config/ssr-options.html#ssr-noexternal"><code>vite.config.js &gt; ssr.noExternal</code></a> we replicate the behavior of frameworks like Next.js.</p>
 </blockquote>
 <h2 id="errors">Errors</h2>
 <p>List of known errors that Node.js throws when it tries to execute the invalid code of some library.</p>

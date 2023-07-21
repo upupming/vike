@@ -121,7 +121,7 @@
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> () </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// This is forbiden and vite-plugin-ssr will throw an error</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// This is forbidden and vite-plugin-ssr will throw an error</span></span>
 <span class="line"><span style="color:#24292F">    pageContext: {</span></span>
 <span class="line"><span style="color:#24292F">      some: </span><span style="color:#0A3069">&#x27;value&#x27;</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
@@ -131,7 +131,7 @@
 <blockquote>
 <p>As explained in <a href="#lightweight-fast">Lightweight &amp; fast</a>, you should keep Route Functions simple and you shouldn&#x27;t implement complex logic in <code>.page.route.js</code> files.</p>
 </blockquote>
-<p>That said, you can workaround it by misusing <code>pageContext.routeParams</code> to provide data.</p>
+<p>That said, you can work around it by misusing <code>pageContext.routeParams</code> to provide data.</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// *.page.route.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> () </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{</span></span>

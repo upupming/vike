@@ -38,8 +38,8 @@
 </ul>
 <p>We use <a href="/passToClient"><code>passToClient</code></a> to determine what subset of <code>pageContext</code> is sent to the browser.</p>
 <h2 id="spa-vs-ssr">SPA vs SSR</h2>
-<p>When implementing SSR, the cient-side <code>render()</code> hook works in tandem with the <a href="/render">server-side <code>render()</code> hook</a>: the server-side <code>render()</code> hook renders the page to HTML and the client-side <code>render()</code> hook <a href="/hydration">hydrates</a> the HTML.</p>
-<p>When implementing an SPA, then the client-side <code>render()</code> hook is solely responsible for rendering the page. (There is still a server-side <code>render()</code> hook but it only renders the HTML shell; it doens&#x27;t render <code>pageContext.Page</code> to HTML.)</p>
+<p>When implementing SSR, the client-side <code>render()</code> hook works in tandem with the <a href="/render">server-side <code>render()</code> hook</a>: the server-side <code>render()</code> hook renders the page to HTML and the client-side <code>render()</code> hook <a href="/hydration">hydrates</a> the HTML.</p>
+<p>When implementing an SPA, then the client-side <code>render()</code> hook is solely responsible for rendering the page. (There is still a server-side <code>render()</code> hook but it only renders the HTML shell; it doesn&#x27;t render <code>pageContext.Page</code> to HTML.)</p>
 <p>See <a href="/render-modes">Guides<!-- --> &gt; <!-- -->Render Modes (SPA, SSR, SSG, HTML-only)</a>.</p>
 <h2 id="multiple-render-hooks">Multiple <code>render()</code> hooks</h2>
 <p>If we <code>export { render }</code> in <code>/pages/star-wars.page.client.js</code> then we define how <code>/pages/star-wars.page.js</code> is rendered while overriding <code>/renderer/_default.page.client.js</code>.</p>

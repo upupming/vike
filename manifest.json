@@ -42,6 +42,7 @@
       "pages/SPA-vs-SSR-vs-HTML.page.server.mdx?extractAssets&lang.mdx",
       "pages/SPA-vs-SSR.page.server.mdx?extractAssets&lang.mdx",
       "pages/SR-vs-CR.page.server.mdx?extractAssets&lang.mdx",
+      "pages/abort.page.server.mdx?extractAssets&lang.mdx",
       "pages/active-links.page.server.mdx?extractAssets&lang.mdx",
       "pages/add.page.server.mdx?extractAssets&lang.mdx",
       "pages/angular.page.server.mdx?extractAssets&lang.mdx",
@@ -168,10 +169,13 @@
       "pages/react-query.page.server.mdx?extractAssets&lang.mdx",
       "pages/react-tour.page.server.mdx?extractAssets&lang.mdx",
       "pages/react.page.server.mdx?extractAssets&lang.mdx",
+      "pages/redirect.page.server.mdx?extractAssets&lang.mdx",
       "pages/redux.page.server.mdx?extractAssets&lang.mdx",
       "pages/relay.page.server.mdx?extractAssets&lang.mdx",
+      "pages/reload.page.server.mdx?extractAssets&lang.mdx",
       "pages/render-as-you-fetch.page.server.mdx?extractAssets&lang.mdx",
       "pages/render-client.page.server.mdx?extractAssets&lang.mdx",
+      "pages/render-hook.page.server.mdx?extractAssets&lang.mdx",
       "pages/render-modes.page.server.mdx?extractAssets&lang.mdx",
       "pages/render.page.server.mdx?extractAssets&lang.mdx",
       "pages/renderPage.page.server.mdx?extractAssets&lang.mdx",
@@ -204,6 +208,7 @@
       "pages/ui-framework.page.server.mdx?extractAssets&lang.mdx",
       "pages/urql.page.server.mdx?extractAssets&lang.mdx",
       "pages/useClientRouter.page.server.mdx?extractAssets&lang.mdx",
+      "pages/usePageContext.page.server.mdx?extractAssets&lang.mdx",
       "pages/v1-design.page.server.mdx?extractAssets&lang.mdx",
       "pages/vercel.page.server.mdx?extractAssets&lang.mdx",
       "pages/vike-packages.page.server.mdx?extractAssets&lang.mdx",
@@ -218,9 +223,9 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.21.5/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-server-routing.af5e3fd5.js",
+    "file": "assets/entries/entry-server-routing.f5126a41.js",
     "imports": [
-      "_chunk-289eaa7e.js"
+      "_chunk-77a42ba2.js"
     ],
     "isEntry": true,
     "src": "../vite-plugin-ssr/dist/esm/client/entry.js"
@@ -244,6 +249,7 @@
       "pages/SPA-vs-SSR-vs-HTML.page.server.mdx?extractAssets&lang.mdx",
       "pages/SPA-vs-SSR.page.server.mdx?extractAssets&lang.mdx",
       "pages/SR-vs-CR.page.server.mdx?extractAssets&lang.mdx",
+      "pages/abort.page.server.mdx?extractAssets&lang.mdx",
       "pages/active-links.page.server.mdx?extractAssets&lang.mdx",
       "pages/add.page.server.mdx?extractAssets&lang.mdx",
       "pages/angular.page.server.mdx?extractAssets&lang.mdx",
@@ -370,10 +376,13 @@
       "pages/react-query.page.server.mdx?extractAssets&lang.mdx",
       "pages/react-tour.page.server.mdx?extractAssets&lang.mdx",
       "pages/react.page.server.mdx?extractAssets&lang.mdx",
+      "pages/redirect.page.server.mdx?extractAssets&lang.mdx",
       "pages/redux.page.server.mdx?extractAssets&lang.mdx",
       "pages/relay.page.server.mdx?extractAssets&lang.mdx",
+      "pages/reload.page.server.mdx?extractAssets&lang.mdx",
       "pages/render-as-you-fetch.page.server.mdx?extractAssets&lang.mdx",
       "pages/render-client.page.server.mdx?extractAssets&lang.mdx",
+      "pages/render-hook.page.server.mdx?extractAssets&lang.mdx",
       "pages/render-modes.page.server.mdx?extractAssets&lang.mdx",
       "pages/render.page.server.mdx?extractAssets&lang.mdx",
       "pages/renderPage.page.server.mdx?extractAssets&lang.mdx",
@@ -406,6 +415,7 @@
       "pages/ui-framework.page.server.mdx?extractAssets&lang.mdx",
       "pages/urql.page.server.mdx?extractAssets&lang.mdx",
       "pages/useClientRouter.page.server.mdx?extractAssets&lang.mdx",
+      "pages/usePageContext.page.server.mdx?extractAssets&lang.mdx",
       "pages/v1-design.page.server.mdx?extractAssets&lang.mdx",
       "pages/vercel.page.server.mdx?extractAssets&lang.mdx",
       "pages/vike-packages.page.server.mdx?extractAssets&lang.mdx",
@@ -420,9 +430,9 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.21.5/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-client-routing.c3ab06ac.js",
+    "file": "assets/entries/entry-client-routing.be3f1f54.js",
     "imports": [
-      "_chunk-289eaa7e.js"
+      "_chunk-77a42ba2.js"
     ],
     "isEntry": true,
     "src": "../vite-plugin-ssr/dist/esm/client/router/entry.js"
@@ -435,14 +445,14 @@
     "file": "assets/static/ScaffoldCallToAction.d2502774.css",
     "src": "ScaffoldCallToAction.css"
   },
-  "_chunk-289eaa7e.js": {
-    "file": "assets/chunks/chunk-289eaa7e.js"
-  },
   "_chunk-40882063.js": {
     "css": [
       "assets/static/ScaffoldCallToAction.d2502774.css"
     ],
     "file": "assets/chunks/chunk-40882063.js"
+  },
+  "_chunk-77a42ba2.js": {
+    "file": "assets/chunks/chunk-77a42ba2.js"
   },
   "_chunk-a33cf6d6.js": {
     "file": "assets/chunks/chunk-a33cf6d6.js"
@@ -536,6 +546,12 @@
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "pages/SR-vs-CR.page.server.mdx?extractAssets&lang.mdx"
+  },
+  "pages/abort.page.server.mdx?extractAssets&lang.mdx": {
+    "file": "assets/entries/pages_abort.page.server.extractAssets.4ed993c7.js",
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "pages/abort.page.server.mdx?extractAssets&lang.mdx"
   },
   "pages/active-links.page.server.mdx?extractAssets&lang.mdx": {
     "file": "assets/entries/pages_active-links.page.server.extractAssets.4ed993c7.js",
@@ -1352,6 +1368,12 @@
     "isEntry": true,
     "src": "pages/react.page.server.mdx?extractAssets&lang.mdx"
   },
+  "pages/redirect.page.server.mdx?extractAssets&lang.mdx": {
+    "file": "assets/entries/pages_redirect.page.server.extractAssets.4ed993c7.js",
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "pages/redirect.page.server.mdx?extractAssets&lang.mdx"
+  },
   "pages/redux.page.server.mdx?extractAssets&lang.mdx": {
     "file": "assets/entries/pages_redux.page.server.extractAssets.4ed993c7.js",
     "isDynamicEntry": true,
@@ -1364,6 +1386,12 @@
     "isEntry": true,
     "src": "pages/relay.page.server.mdx?extractAssets&lang.mdx"
   },
+  "pages/reload.page.server.mdx?extractAssets&lang.mdx": {
+    "file": "assets/entries/pages_reload.page.server.extractAssets.4ed993c7.js",
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "pages/reload.page.server.mdx?extractAssets&lang.mdx"
+  },
   "pages/render-as-you-fetch.page.server.mdx?extractAssets&lang.mdx": {
     "file": "assets/entries/pages_render-as-you-fetch.page.server.extractAssets.4ed993c7.js",
     "isDynamicEntry": true,
@@ -1375,6 +1403,12 @@
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "pages/render-client.page.server.mdx?extractAssets&lang.mdx"
+  },
+  "pages/render-hook.page.server.mdx?extractAssets&lang.mdx": {
+    "file": "assets/entries/pages_render-hook.page.server.extractAssets.4ed993c7.js",
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "pages/render-hook.page.server.mdx?extractAssets&lang.mdx"
   },
   "pages/render-modes.page.server.mdx?extractAssets&lang.mdx": {
     "file": "assets/entries/pages_render-modes.page.server.extractAssets.4ed993c7.js",
@@ -1567,6 +1601,12 @@
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "pages/useClientRouter.page.server.mdx?extractAssets&lang.mdx"
+  },
+  "pages/usePageContext.page.server.mdx?extractAssets&lang.mdx": {
+    "file": "assets/entries/pages_usePageContext.page.server.extractAssets.4ed993c7.js",
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "pages/usePageContext.page.server.mdx?extractAssets&lang.mdx"
   },
   "pages/v1-design.page.server.mdx?extractAssets&lang.mdx": {
     "file": "assets/entries/pages_v1-design.page.server.extractAssets.4ed993c7.js",

@@ -19,11 +19,12 @@
 <ul>
 <li>From an architectural perspective, <a href="/architecture">vite-plugin-ssr only takes care of the frontend</a>: you keep control over the rest of your stack and architecture.</li>
 <li>From a server perspective, vite-plugin-ssr is <a href="#server-side-tools">just a middleware</a>: you can embed vite-plugin-ssr into any server.</li>
+<li>You can <a href="/render-modes">disable SSR (i.e. use SPA/MPA)</a> and/or <a href="/pre-rendering">pre-render</a> your pages to remove the need for a production server and deploy to a <a href="/static-hosts">static host</a> instead.</li>
 <li>You have full control over how pages are rendered, which means that you can use any <a href="#ui-tool">UI tool</a> and any <a href="#client-side-tools">client-side tool</a>.</li>
 </ul>
 <p>In principle, you should be able to use vite-plugin-ssr with any tool you want.</p>
 <blockquote>
-<p>If you struggle integrating a tool, don&#x27;t hesitate to <a href="https://github.com/brillout/vite-plugin-ssr/discussions/new">create a new GitHub Discussion</a> — we are responsive and looking forward to assist you.</p>
+<p>If you struggle integrating a tool, don&#x27;t hesitate to <a href="https://github.com/brillout/vite-plugin-ssr/discussions/new">create a new GitHub Discussion</a>.</p>
 </blockquote>
 <h2 id="ui-tools">UI tools</h2>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/_default.page.server.js</span></span>
@@ -109,12 +110,12 @@
 </ul>
 <p>Integrating a client-side tool is usually only a matter of following its official installation guide.</p>
 <h2 id="server-side-tools">Server-side tools</h2>
-<p>From the perspective of the server, vite-plugin-ssr is just a server-agnostic middleware:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderPage() doesn&#x27;t depend on Node.js and can be used anywhere such as</span></span>
-<span class="line"><span style="color:#6E7781">// Cloudflare Workers, AWS EC2, AWS Lambda, Vercel, Deno Deploy, Lagon, ...</span></span>
+<p>From the perspective of the server, vite-plugin-ssr is just a middleware:</p>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderPage() doesn&#x27;t depend on Node.js and can be used in any JavaScript environment:</span></span>
+<span class="line"><span style="color:#6E7781">// AWS, Cloudflare, Vercel, Node.js, Deno, Bun, Lagon, ...</span></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderPage } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vite-plugin-ssr/server&#x27;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Can be any server framework (Express.js/Deno/Fastify/Hono/HatTip/...)</span></span>
+<span class="line"><span style="color:#6E7781">// Can be any server: Express.js, Fastify, Hono, Cloudflare Worker, AWS Lambda Function, ...</span></span>
 <span class="line"><span style="color:#24292F">server.</span><span style="color:#8250DF">addMiddleware</span><span style="color:#24292F">({</span></span>
 <span class="line"><span style="color:#24292F">  method: </span><span style="color:#0A3069">&#x27;GET&#x27;</span><span style="color:#24292F">,</span></span>
 <span class="line"><span style="color:#24292F">  route: </span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#6E7781">// Catch-all</span></span>
@@ -126,10 +127,11 @@
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> response</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<p>The vite-plugin-ssr middleware is versatile and can be used within any server environment.</p>
 <p>Alternatively, you can <a href="/pre-rendering">pre-render</a> your pages to remove the need for a production server and deploy to a <a href="/static-hosts">static host</a> instead.</p>
 <p>You can use:</p>
 <ul>
-<li>Any server framework (Express, Koa, Fastify, Hapi, ...)</li>
+<li>Any server framework (Express, Fastify, Hono, Nitro, HatTip, Koa, Hapi, ...)</li>
 <li>Any authentication strategy/tool (email/password, OAuth, Auth.js, Passport.js, Grant, Keycloak, Auth0, ...).</li>
 <li>Any serverless/edge environment (Cloudflare Workers, Vercel, Firebase, AWS Lambda, Google Cloud Functions, Deno Deploy, ...)</li>
 <li>Any virtual private server (AWS EC2, Google Cloud, ...)</li>

@@ -62,12 +62,12 @@
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToDom</span><span style="color:#24292F">(Page, document.</span><span style="color:#8250DF">getElementById</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;#root&#x27;</span><span style="color:#24292F">))</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <h2 id="renderpage"><code>renderPage()</code></h2>
-<p>From the perspective of the server, vite-plugin-ssr is just a server-agnostic middleware:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderPage() doesn&#x27;t depend on Node.js and can be used anywhere such as</span></span>
-<span class="line"><span style="color:#6E7781">// Cloudflare Workers, AWS EC2, AWS Lambda, Vercel, Deno Deploy, Lagon, ...</span></span>
+<p>From the perspective of the server, vite-plugin-ssr is just a middleware:</p>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderPage() doesn&#x27;t depend on Node.js and can be used in any JavaScript environment:</span></span>
+<span class="line"><span style="color:#6E7781">// AWS, Cloudflare, Vercel, Node.js, Deno, Bun, Lagon, ...</span></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderPage } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vite-plugin-ssr/server&#x27;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Can be any server framework (Express.js/Deno/Fastify/Hono/HatTip/...)</span></span>
+<span class="line"><span style="color:#6E7781">// Can be any server: Express.js, Fastify, Hono, Cloudflare Worker, AWS Lambda Function, ...</span></span>
 <span class="line"><span style="color:#24292F">server.</span><span style="color:#8250DF">addMiddleware</span><span style="color:#24292F">({</span></span>
 <span class="line"><span style="color:#24292F">  method: </span><span style="color:#0A3069">&#x27;GET&#x27;</span><span style="color:#24292F">,</span></span>
 <span class="line"><span style="color:#24292F">  route: </span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#6E7781">// Catch-all</span></span>
@@ -79,6 +79,7 @@
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> response</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<p>The vite-plugin-ssr middleware is versatile and can be used within any server environment.</p>
 <p>Alternatively, you can <a href="/pre-rendering">pre-render</a> your pages to remove the need for a production server and deploy to a <a href="/static-hosts">static host</a> instead.</p>
 <p>Vite-plugin-ssr can easily be embedded into any server architecture and any deployment strategy.</p><div style="margin-top:50px"><a href="https://github.com/brillout/vite-plugin-ssr/edit/main/docs/pages/architecture.page.server.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         

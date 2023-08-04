@@ -170,6 +170,7 @@
       "pages/react-tour.page.server.mdx?extractAssets&lang.mdx",
       "pages/react.page.server.mdx?extractAssets&lang.mdx",
       "pages/redirect.page.server.mdx?extractAssets&lang.mdx",
+      "pages/redirects.page.server.mdx?extractAssets&lang.mdx",
       "pages/redux.page.server.mdx?extractAssets&lang.mdx",
       "pages/relay.page.server.mdx?extractAssets&lang.mdx",
       "pages/reload.page.server.mdx?extractAssets&lang.mdx",
@@ -223,7 +224,7 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.21.5/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-server-routing.324fc0b0.js",
+    "file": "assets/entries/entry-server-routing.b636b956.js",
     "imports": [
       "_chunk-99381394.js"
     ],
@@ -377,6 +378,7 @@
       "pages/react-tour.page.server.mdx?extractAssets&lang.mdx",
       "pages/react.page.server.mdx?extractAssets&lang.mdx",
       "pages/redirect.page.server.mdx?extractAssets&lang.mdx",
+      "pages/redirects.page.server.mdx?extractAssets&lang.mdx",
       "pages/redux.page.server.mdx?extractAssets&lang.mdx",
       "pages/relay.page.server.mdx?extractAssets&lang.mdx",
       "pages/reload.page.server.mdx?extractAssets&lang.mdx",
@@ -430,7 +432,7 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.21.5/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-client-routing.0c469267.js",
+    "file": "assets/entries/entry-client-routing.ad0270d0.js",
     "imports": [
       "_chunk-99381394.js"
     ],
@@ -1373,6 +1375,12 @@
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "pages/redirect.page.server.mdx?extractAssets&lang.mdx"
+  },
+  "pages/redirects.page.server.mdx?extractAssets&lang.mdx": {
+    "file": "assets/entries/pages_redirects.page.server.extractAssets.4ed993c7.js",
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "pages/redirects.page.server.mdx?extractAssets&lang.mdx"
   },
   "pages/redux.page.server.mdx?extractAssets&lang.mdx": {
     "file": "assets/entries/pages_redux.page.server.extractAssets.4ed993c7.js",

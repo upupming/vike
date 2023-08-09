@@ -9,5 +9,6 @@
   },
   "baseServer": "/",
   "baseAssets": "/",
-  "includeAssetsImportedByServer": true
+  "includeAssetsImportedByServer": true,
+  "redirects": {}
 }

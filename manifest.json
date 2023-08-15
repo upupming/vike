@@ -20,10 +20,10 @@
     "src": "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
   },
   "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.server.css": {
-    "file": "assets/static/default.page.server.e70d4382.css",
+    "file": "assets/static/default.page.server.a90a7cab.css",
     "src": "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.server.css"
   },
-  "../vite-plugin-ssr/dist/esm/client/entry.js": {
+  "../vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js": {
     "dynamicImports": [
       "pages/banner.page.client.ts",
       "pages/index/index.page.client.ts",
@@ -224,14 +224,14 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-server-routing.4d7ea9f8.js",
+    "file": "assets/entries/entry-client-routing.637ae535.js",
     "imports": [
-      "_chunk-a851060b.js"
+      "_chunk-24dd3612.js"
     ],
     "isEntry": true,
-    "src": "../vite-plugin-ssr/dist/esm/client/entry.js"
+    "src": "../vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js"
   },
-  "../vite-plugin-ssr/dist/esm/client/router/entry.js": {
+  "../vite-plugin-ssr/dist/esm/client/server-routing-runtime/entry.js": {
     "dynamicImports": [
       "pages/banner.page.client.ts",
       "pages/index/index.page.client.ts",
@@ -432,18 +432,18 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-client-routing.2b14d480.js",
+    "file": "assets/entries/entry-server-routing.3e62bf3e.js",
     "imports": [
-      "_chunk-a851060b.js"
+      "_chunk-24dd3612.js"
     ],
     "isEntry": true,
-    "src": "../vite-plugin-ssr/dist/esm/client/router/entry.js"
+    "src": "../vite-plugin-ssr/dist/esm/client/server-routing-runtime/entry.js"
+  },
+  "_chunk-24dd3612.js": {
+    "file": "assets/chunks/chunk-24dd3612.js"
   },
   "_chunk-a33cf6d6.js": {
     "file": "assets/chunks/chunk-a33cf6d6.js"
-  },
-  "_chunk-a851060b.js": {
-    "file": "assets/chunks/chunk-a851060b.js"
   },
   "images/icons/react.svg": {
     "file": "assets/static/react.274eee9a.svg",
@@ -580,7 +580,7 @@
     "src": "pages/banner.page.client.ts"
   },
   "pages/banner.page.server.tsx?extractAssets&lang.css": {
-    "file": "assets/static/banner.page.server.2ace810d.css",
+    "file": "assets/static/banner.page.server.52181dd6.css",
     "src": "pages/banner.page.server.tsx?extractAssets&lang.css"
   },
   "pages/banner.page.server.tsx?extractAssets&lang.tsx": {
@@ -589,9 +589,9 @@
       "assets/static/chevron-K3WPYLOP.38e8d76a.svg"
     ],
     "css": [
-      "assets/static/banner.page.server.2ace810d.css"
+      "assets/static/banner.page.server.52181dd6.css"
     ],
-    "file": "assets/entries/pages_banner.page.server.extractAssets.80dc4d4e.js",
+    "file": "assets/entries/pages_banner.page.server.extractAssets.0f7c22e9.js",
     "imports": [
       "pages/index/index.page.server.tsx?extractAssets&lang.tsx"
     ],

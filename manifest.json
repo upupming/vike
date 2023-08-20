@@ -1,27 +1,27 @@
 {
-  "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/Inter-Var-IOAEQULN.ttf": {
+  "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/Inter-Var-IOAEQULN.ttf": {
     "file": "assets/static/Inter-Var-IOAEQULN.2bc54814.ttf",
-    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/Inter-Var-IOAEQULN.ttf"
+    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/Inter-Var-IOAEQULN.ttf"
   },
-  "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/chevron-K3WPYLOP.svg": {
+  "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/chevron-K3WPYLOP.svg": {
     "file": "assets/static/chevron-K3WPYLOP.38e8d76a.svg",
-    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/chevron-K3WPYLOP.svg"
+    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/chevron-K3WPYLOP.svg"
   },
-  "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.css": {
+  "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.css": {
     "file": "assets/static/default.page.client.c08aeeaa.css",
-    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.css"
+    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.css"
   },
-  "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js": {
+  "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js": {
     "file": "assets/chunks/chunk-d290a29b.js",
     "imports": [
       "_chunk-a33cf6d6.js"
     ],
     "isDynamicEntry": true,
-    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
+    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
   },
-  "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.server.css": {
+  "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.server.css": {
     "file": "assets/static/default.page.server.a90a7cab.css",
-    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.server.css"
+    "src": "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.server.css"
   },
   "../vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js": {
     "dynamicImports": [
@@ -127,6 +127,7 @@
       "pages/koa.page.server.mdx?extractAssets&lang.mdx",
       "pages/languages.page.server.mdx?extractAssets&lang.mdx",
       "pages/layouts.page.server.mdx?extractAssets&lang.mdx",
+      "pages/lazy-transpiling.page.server.mdx?extractAssets&lang.mdx",
       "pages/markdown.page.server.mdx?extractAssets&lang.mdx",
       "pages/meta.page.server.mdx?extractAssets&lang.mdx",
       "pages/migration-0.4.page.server.mdx?extractAssets&lang.mdx",
@@ -223,9 +224,9 @@
       "pages/vuex.page.server.mdx?extractAssets&lang.mdx",
       "pages/why-the-v1-design.page.server.mdx?extractAssets&lang.mdx",
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
-      "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
+      "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-client-routing.9e3bbffc.js",
+    "file": "assets/entries/entry-client-routing.c10c9368.js",
     "imports": [
       "_chunk-729f95c8.js"
     ],
@@ -336,6 +337,7 @@
       "pages/koa.page.server.mdx?extractAssets&lang.mdx",
       "pages/languages.page.server.mdx?extractAssets&lang.mdx",
       "pages/layouts.page.server.mdx?extractAssets&lang.mdx",
+      "pages/lazy-transpiling.page.server.mdx?extractAssets&lang.mdx",
       "pages/markdown.page.server.mdx?extractAssets&lang.mdx",
       "pages/meta.page.server.mdx?extractAssets&lang.mdx",
       "pages/migration-0.4.page.server.mdx?extractAssets&lang.mdx",
@@ -432,9 +434,9 @@
       "pages/vuex.page.server.mdx?extractAssets&lang.mdx",
       "pages/why-the-v1-design.page.server.mdx?extractAssets&lang.mdx",
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
-      "../node_modules/.pnpm/@brillout+docpress@0.5.4_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
+      "../node_modules/.pnpm/@brillout+docpress@0.5.7_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-server-routing.aaf3ff10.js",
+    "file": "assets/entries/entry-server-routing.57b60ea9.js",
     "imports": [
       "_chunk-729f95c8.js"
     ],
@@ -1007,6 +1009,11 @@
     "file": "assets/entries/pages_layouts.page.server.extractAssets.4ed993c7.js",
     "isEntry": true,
     "src": "pages/layouts.page.server.mdx?extractAssets&lang.mdx"
+  },
+  "pages/lazy-transpiling.page.server.mdx?extractAssets&lang.mdx": {
+    "file": "assets/entries/pages_lazy-transpiling.page.server.extractAssets.4ed993c7.js",
+    "isEntry": true,
+    "src": "pages/lazy-transpiling.page.server.mdx?extractAssets&lang.mdx"
   },
   "pages/markdown.page.server.mdx?extractAssets&lang.mdx": {
     "file": "assets/entries/pages_markdown.page.server.extractAssets.4ed993c7.js",

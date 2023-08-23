@@ -34,12 +34,12 @@ writing ESM code instead of CJS code)
 <span class="line"><span style="color:#24292f">}</span></span></code></pre></div>
 <p>This <a href="https://nodejs.org/docs/latest-v13.x/api/esm.html#esm_package_json_type_field:~:text=Files%20ending%20with%20.js%20will%20be%20loaded%20as%20ES%20modules%20when%20the%20nearest%20parent%20package.json%20file%20contains%20a%20top%2Dlevel%20field%20%22type%22%20with%20a%20value%20of%20%22module%22.">makes Node.js treat all .js files as ESM</a>.</p>
 <p>This means that, if you have .js files written in CJS, then you&#x27;ll have to migrate them to ESM. For example:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">-// CJS code</span></span>
-<span class="line"><span style="color:#82071E">-const express = require(&#x27;express&#x27;)</span></span>
-<span class="line"><span style="color:#82071E">-const { renderPage } = require(&#x27;vite-plugin-ssr/server&#x27;)</span></span>
-<span class="line"><span style="color:#116329">+// ESM code</span></span>
-<span class="line"><span style="color:#116329">+import express from &#x27;express&#x27;</span></span>
-<span class="line"><span style="color:#116329">+import { renderPage } from &#x27;vite-plugin-ssr/server&#x27;</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // CJS code</span></span>
+<span class="line"><span style="color:#82071E">- const express = require(&#x27;express&#x27;)</span></span>
+<span class="line"><span style="color:#82071E">- const { renderPage } = require(&#x27;vite-plugin-ssr/server&#x27;)</span></span>
+<span class="line"><span style="color:#116329">+ // ESM code</span></span>
+<span class="line"><span style="color:#116329">+ import express from &#x27;express&#x27;</span></span>
+<span class="line"><span style="color:#116329">+ import { renderPage } from &#x27;vite-plugin-ssr/server&#x27;</span></span></code></pre></div>
 <blockquote>
 <p>An escape hatch is to use <a href="https://nodejs.org/api/esm.html#enabling:~:text=Authors%20can%20tell%20Node.js%20to%20use%20the%20ECMAScript%20modules%20loader%20via%20the%20.mjs%20file%20extension">the <code>.cjs</code> and <code>.mjs</code> file extensions</a>, enabling you to determine/change the module system on a file-by-file basis regardless of whether <code>package.json#type</code> is set to <code>&quot;module&quot;</code> or <code>&quot;commonjs&quot;</code>.</p>
 </blockquote>

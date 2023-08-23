@@ -32,6 +32,7 @@
       "pages/AuthJS-old-1.page.server.mdx?extractAssets&lang.mdx",
       "pages/AuthJS-old-2.page.server.mdx?extractAssets&lang.mdx",
       "pages/AuthJS.page.server.mdx?extractAssets&lang.mdx",
+      "pages/CJS.page.server.mdx?extractAssets&lang.mdx",
       "pages/Config_.page.server.mdx?extractAssets&lang.mdx",
       "pages/MDXEditor.page.server.mdx?extractAssets&lang.mdx",
       "pages/NODE_ENV.page.server.mdx?extractAssets&lang.mdx",
@@ -227,9 +228,9 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.8_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-client-routing.b1fbee00.js",
+    "file": "assets/entries/entry-client-routing.91a64d6f.js",
     "imports": [
-      "_chunk-729f95c8.js"
+      "_chunk-3a87a9f5.js"
     ],
     "isEntry": true,
     "src": "../vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js"
@@ -243,6 +244,7 @@
       "pages/AuthJS-old-1.page.server.mdx?extractAssets&lang.mdx",
       "pages/AuthJS-old-2.page.server.mdx?extractAssets&lang.mdx",
       "pages/AuthJS.page.server.mdx?extractAssets&lang.mdx",
+      "pages/CJS.page.server.mdx?extractAssets&lang.mdx",
       "pages/Config_.page.server.mdx?extractAssets&lang.mdx",
       "pages/MDXEditor.page.server.mdx?extractAssets&lang.mdx",
       "pages/NODE_ENV.page.server.mdx?extractAssets&lang.mdx",
@@ -438,15 +440,15 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.8_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-server-routing.8fd26c4a.js",
+    "file": "assets/entries/entry-server-routing.e7ff2001.js",
     "imports": [
-      "_chunk-729f95c8.js"
+      "_chunk-3a87a9f5.js"
     ],
     "isEntry": true,
     "src": "../vite-plugin-ssr/dist/esm/client/server-routing-runtime/entry.js"
   },
-  "_chunk-729f95c8.js": {
-    "file": "assets/chunks/chunk-729f95c8.js"
+  "_chunk-3a87a9f5.js": {
+    "file": "assets/chunks/chunk-3a87a9f5.js"
   },
   "_chunk-a33cf6d6.js": {
     "file": "assets/chunks/chunk-a33cf6d6.js"
@@ -478,6 +480,11 @@
     "file": "assets/entries/pages_AuthJS.page.server.extractAssets.4ed993c7.js",
     "isEntry": true,
     "src": "pages/AuthJS.page.server.mdx?extractAssets&lang.mdx"
+  },
+  "pages/CJS.page.server.mdx?extractAssets&lang.mdx": {
+    "file": "assets/entries/pages_CJS.page.server.extractAssets.4ed993c7.js",
+    "isEntry": true,
+    "src": "pages/CJS.page.server.mdx?extractAssets&lang.mdx"
   },
   "pages/Config_.page.server.mdx?extractAssets&lang.mdx": {
     "file": "assets/entries/pages_Config_.page.server.extractAssets.4ed993c7.js",

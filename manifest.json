@@ -228,9 +228,9 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.8_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-client-routing.933a1b43.js",
+    "file": "assets/entries/entry-client-routing.d979f26f.js",
     "imports": [
-      "_chunk-32b57c28.js"
+      "_chunk-151a56ab.js"
     ],
     "isEntry": true,
     "src": "../vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js"
@@ -440,15 +440,15 @@
       "pages/windi-css.page.server.mdx?extractAssets&lang.mdx",
       "../node_modules/.pnpm/@brillout+docpress@0.5.8_@types+node@15.14.9_react-dom@18.2.0_react@18.2.0_rollup@3.27.2/node_modules/@brillout/docpress/dist/renderer/_default.page.client.js"
     ],
-    "file": "assets/entries/entry-server-routing.083f58de.js",
+    "file": "assets/entries/entry-server-routing.029e468b.js",
     "imports": [
-      "_chunk-32b57c28.js"
+      "_chunk-151a56ab.js"
     ],
     "isEntry": true,
     "src": "../vite-plugin-ssr/dist/esm/client/server-routing-runtime/entry.js"
   },
-  "_chunk-32b57c28.js": {
-    "file": "assets/chunks/chunk-32b57c28.js"
+  "_chunk-151a56ab.js": {
+    "file": "assets/chunks/chunk-151a56ab.js"
   },
   "_chunk-a33cf6d6.js": {
     "file": "assets/chunks/chunk-a33cf6d6.js"

@@ -38,21 +38,23 @@ you can use path aliases:</p>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
 <span class="line"><span style="color:#953800">  </span><span style="color:#24292F">resolve: {</span></span>
 <span class="line"><span style="color:#24292F">    alias: {</span></span>
-<span class="line"><span style="color:#24292F">     </span><span style="color:#6E7781">// Prefix your path aliases with a special character, most commonly #</span></span>
 <span class="line"><span style="color:#24292F">     </span><span style="color:#0A3069">&quot;#root&quot;</span><span style="color:#24292F">: __dirname,</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<p>Your path aliases need to start with a special character, so that your aliased imports can be distinguished from npm package imports.
-We recommend following the <a href="https://nodejs.org/api/packages.html#subpath-imports:~:text=must%20always%20start%20with%20%23%20to%20ensure%20they%20are%20disambiguated%20from%20external%20package%20specifiers"><code>#</code> prefix convention</a>.</p>
 <blockquote>
-<p>It only applies to files that are processed by Vite.
-Some of your Node.js files may not be processed by Vite,
+<p>The Vite config <code>resolve.alias</code> only applies to files that are processed by Vite.
+Keep in mind that some of your server files may not be processed by Vite,
 see the <a href="#node-js">Node.js section below</a>.</p>
+</blockquote>
+<p>We recommend following the <a href="https://nodejs.org/api/packages.html#subpath-imports:~:text=must%20always%20start%20with%20%23%20to%20ensure%20they%20are%20disambiguated%20from%20external%20package%20specifiers">Node.js convention</a> to prefix path aliases with the special character <code>#</code>.</p>
+<blockquote>
+<p>While your path aliases don&#x27;t need to follow the <code>#</code> convention, they do need to start with a special character to distinguish them from npm package names.</p>
+<p>Vite-plugin-ssr needs to be able to distinguish between path alias imports and npm package imports. If it&#x27;s an issue for you then elaborate your use case in a new <a href="https://github.com/brillout/vite-plugin-ssr/discussions">GitHub Discussion</a>.</p>
 </blockquote>
 <p>See also:</p>
 <ul>
-<li><a href="https://vitejs.dev/config/shared-options.html#resolve-alias">Vite &gt; <code>vite.config.js#resolve.alias</code></a></li>
+<li><a href="https://vitejs.dev/config/shared-options.html#resolve-alias">Vite Docs &gt; <code>resolve.alias</code></a></li>
 <li>
 <a href="https://github.com/brillout/vite-plugin-ssr/blob/main/examples/path-aliases/vite.config.ts">/examples/path-aliases/vite.config.ts</a>
 </li>

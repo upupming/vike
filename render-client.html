@@ -37,6 +37,10 @@
 <li><code>pageContext</code> is a subset of the <code>pageContext</code> defined on the server-side.</li>
 </ul>
 <p>We use <a href="/passToClient"><code>passToClient</code></a> to determine what subset of <code>pageContext</code> is sent to the browser.</p>
+<blockquote>
+<p>See <a href="/render-modes">Render Modes</a> and <a href="/clientRouting"><code>clientRouting</code></a> for illustrations of conditional DOM
+hydration, for supporting both SPA and SSR.</p>
+</blockquote>
 <h2 id="spa-vs-ssr">SPA vs SSR</h2>
 <p>When implementing SSR, the client-side <code>render()</code> hook works in tandem with the <a href="/render-hook">server-side <code>render()</code> hook</a>: the server-side <code>render()</code> hook renders the page to HTML and the client-side <code>render()</code> hook <a href="/hydration">hydrates</a> the HTML.</p>
 <p>When implementing an SPA, then the client-side <code>render()</code> hook is solely responsible for rendering the page. (There is still a server-side <code>render()</code> hook but it only renders the HTML shell; it doesn&#x27;t render <code>pageContext.Page</code> to HTML.)</p>

@@ -190,32 +190,31 @@
 <blockquote>
 <p>Vike is the upcoming new name of vite-plugin-ssr, see <a href="https://github.com/brillout/vite-plugin-ssr/issues/736">#736</a>.</p>
 </blockquote>
-<pre><code>declare global {
-  namespace Vike {
-    interface PageContext {
-      // Define type of pageContext.user
-      user?: {
-        name: string
-        id: string
-        isAdmin: boolean
-      }
-      // Define type of pageContext.pageProps
-      pageProps?: PageProps
-      // Refine type of pageContext.Page (it&#x27;s `unknown` by default)
-      Page: (pageProps) =&gt; JSX.Element
-    }
-  }
-}
-type PageProps = {
-  movies: {
-    title: string
-    releaseDate: Date
-  }[]
-}
-
-// Tell TypeScript this file isn&#x27;t an ambient module
-export {}
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">declare</span><span style="color:#24292F"> global {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">namespace</span><span style="color:#24292F"> </span><span style="color:#953800">Vike</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">interface</span><span style="color:#24292F"> </span><span style="color:#953800">PageContext</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Define type of pageContext.user</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#953800">user</span><span style="color:#CF222E">?:</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#953800">name</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#953800">id</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#953800">isAdmin</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">boolean</span></span>
+<span class="line"><span style="color:#24292F">      }</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Define type of pageContext.pageProps</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#953800">pageProps</span><span style="color:#CF222E">?:</span><span style="color:#24292F"> </span><span style="color:#953800">PageProps</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Refine type of pageContext.Page (it&#x27;s `unknown` by default)</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#8250DF">Page</span><span style="color:#CF222E">:</span><span style="color:#24292F"> (</span><span style="color:#953800">pageProps</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#953800">JSX</span><span style="color:#24292F">.</span><span style="color:#953800">Element</span></span>
+<span class="line"><span style="color:#24292F">    }</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"><span style="color:#CF222E">type</span><span style="color:#24292F"> </span><span style="color:#953800">PageProps</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">movies</span><span style="color:#CF222E">:</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#953800">title</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#953800">releaseDate</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">Date</span></span>
+<span class="line"><span style="color:#24292F">  }[]</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// Tell TypeScript this file isn&#x27;t an ambient module</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> {}</span></span></code></pre></div>
 <p>If you use <a href="/server-routing">Server Routing</a>:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in client and server</span></span>

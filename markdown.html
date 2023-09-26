@@ -197,7 +197,6 @@ which you can access at
 <p>To be able to do so, we recommend defining a file <code>metadata.js</code> that contains the metadata of all your markdown pages, see <a href="#metadata">Metadata</a>.</p>
 <p>Another apporach is to use <a href="https://vitejs.dev/guide/features.html#glob-import"><code>import.meta.glob()</code></a> to retrieve the list of markdown files, but we usually recommend against this approach. The problem is that, in order to retrieve the metadata of all your markdown files, you&#x27;d need to load the <em>entire</em> code of <em>all</em> your markdown files, which contradicts <a href="/lazy-transpiling">Vite&#x27;s lazy-transpiling approach</a> and dramatically degrading Vite&#x27;s development DX speed.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/markdown.page.server.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
-    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
     <script type="text/javascript">
       const appId = 'YMV9Y4B58S';
@@ -221,8 +220,6 @@ which you can access at
       });
     </script>
   
-    <script>[document.getElementById('docsearch-desktop'), document.getElementById('docsearch-mobile')].forEach(el => el.addEventListener('click', () => window.alert("Algolia approval is pending: the search results may be empty until the approval process is completed.")))</script>
-    
         <script type="module" src="/assets/chunks/chunk-d290a29b.js" defer></script>
       </body>
     </html>

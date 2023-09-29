@@ -110,15 +110,15 @@
 </ul>
 <p>Integrating a client-side tool is usually only a matter of following its official installation guide.</p>
 <h2 id="server-side-tools">Server-side tools</h2>
-<p>From the perspective of the server, vike is just a middleware:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderPage() doesn&#x27;t depend on Node.js and can be used in any JavaScript environment:</span></span>
-<span class="line"><span style="color:#6E7781">// AWS, Cloudflare, Vercel, Node.js, Deno, Bun, Lagon, ...</span></span>
+<p>From the perspective of a server, Vike is just a middleware:</p>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderPage() doesn&#x27;t depend on Node.js and can be used within any JavaScript environment:</span></span>
+<span class="line"><span style="color:#6E7781">// Node.js, AWS, Cloudflare, Vercel, Deno, Bun, Lagon, ...</span></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderPage } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Can be any server: Express.js, Fastify, Hono, Cloudflare Worker, AWS Lambda Function, ...</span></span>
+<span class="line"><span style="color:#6E7781">// Any server: Express.js, Fastify, Hono, Cloudflare Worker, AWS Lambda Function, ...</span></span>
 <span class="line"><span style="color:#24292F">server.</span><span style="color:#8250DF">addMiddleware</span><span style="color:#24292F">({</span></span>
 <span class="line"><span style="color:#24292F">  method: </span><span style="color:#0A3069">&#x27;GET&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">  route: </span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#6E7781">// Catch-all</span></span>
+<span class="line"><span style="color:#24292F">  route: </span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#6E7781">// catch-all</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#8250DF">handler</span><span style="color:#24292F">(</span><span style="color:#953800">request</span><span style="color:#24292F">) {</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContextInit</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> { urlOriginal: request.url }</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderPage</span><span style="color:#24292F">(pageContextInit)</span></span>
@@ -127,7 +127,7 @@
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> response</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
-<p>The vike middleware is versatile and can be used within any server environment.</p>
+<p>It&#x27;s versatile and can be embedded into any server.</p>
 <p>Alternatively, you can <a href="/pre-rendering">pre-render</a> your pages to remove the need for a production server and deploy to a <a href="/static-hosts">static host</a> instead.</p>
 <p>You can use:</p>
 <ul>

@@ -28,10 +28,10 @@ Next.js manages server side hydration of styles as well as transpilation, so to 
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> react </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;@vitejs/plugin-react&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> ssr </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/plugin&#x27;</span></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vike </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/plugin&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span><span style="color:#8250DF">react</span><span style="color:#24292F">({ babel: { plugins: [</span><span style="color:#0A3069">&#x27;styled-jsx/babel&#x27;</span><span style="color:#24292F">] } }), </span><span style="color:#8250DF">ssr</span><span style="color:#24292F">()]</span></span>
+<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span><span style="color:#8250DF">react</span><span style="color:#24292F">({ babel: { plugins: [</span><span style="color:#0A3069">&#x27;styled-jsx/babel&#x27;</span><span style="color:#24292F">] } }), </span><span style="color:#8250DF">vike</span><span style="color:#24292F">()]</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
 <ol start="3">
 <li>Collect the styles during server-side rendering and attach to the DOM as <code>&lt;head&gt;</code> tags.</li>

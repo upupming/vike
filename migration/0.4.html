@@ -66,12 +66,12 @@
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- $ vite build &amp;&amp; vike prerender</span></span>
 <span class="line"><span style="color:#116329">+ $ vite build</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F">  // vite.config.js</span></span>
-<span class="line"><span style="color:#24292F">  import { ssr } from &#x27;vike/plugin&#x27;</span></span>
+<span class="line"><span style="color:#24292F">  import vike from &#x27;vike/plugin&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#24292F">  export config {</span></span>
 <span class="line"><span style="color:#24292F">    plugins: [</span></span>
-<span class="line"><span style="color:#82071E">-     ssr()</span></span>
-<span class="line"><span style="color:#116329">+     ssr({ prerender: true })</span></span>
+<span class="line"><span style="color:#82071E">-     vike()</span></span>
+<span class="line"><span style="color:#116329">+     vike({ prerender: true })</span></span>
 <span class="line"><span style="color:#24292F">    ]</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span></code></pre></div>
 <blockquote>
@@ -80,7 +80,7 @@
 <p>All pre-render options are now defined in <code>vite.config.js</code>:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- $ vike prerender --partial -- noExtraDir --root src/ --outDir build/ --parallel 1</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F">  // vite.config.js</span></span>
-<span class="line"><span style="color:#24292F">  import { ssr } from &#x27;vike/plugin&#x27;</span></span>
+<span class="line"><span style="color:#24292F">  import vike from &#x27;vike/plugin&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#24292F">  export config {</span></span>
 <span class="line"><span style="color:#116329">+   root: &#x27;src/&#x27;,</span></span>
@@ -88,7 +88,7 @@
 <span class="line"><span style="color:#116329">+     outDir: &#x27;build/</span></span>
 <span class="line"><span style="color:#116329">+   },</span></span>
 <span class="line"><span style="color:#24292F">    plugins: [</span></span>
-<span class="line"><span style="color:#24292F">      ssr({</span></span>
+<span class="line"><span style="color:#24292F">      vike({</span></span>
 <span class="line"><span style="color:#116329">+       prerender: {</span></span>
 <span class="line"><span style="color:#116329">+         partial: true,</span></span>
 <span class="line"><span style="color:#116329">+         noExtraDir: true,</span></span>

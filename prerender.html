@@ -66,12 +66,12 @@ then we can pre-render our app without defining any <code>prerender()</code> hoo
 <span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> { pageProps }</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">        url,</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Because we already provide the `pageContext`, vike will *not* call</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Because we already provide the `pageContext`, Vike will *not* call</span></span>
 <span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// the `onBeforeRender()` hook for `url`.</span></span>
 <span class="line"><span style="color:#24292F">        pageContext</span></span>
 <span class="line"><span style="color:#24292F">      }</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* We could also only return `url` and not provide `pageContext`. In that case</span></span>
-<span class="line"><span style="color:#6E7781">       * vike would call the `onBeforeRender()` hook. But that would be wasteful</span></span>
+<span class="line"><span style="color:#6E7781">       * Vike would call the `onBeforeRender()` hook. But that would be wasteful</span></span>
 <span class="line"><span style="color:#6E7781">       * since we already have all the data of all movies from our `await Movie.findAll()` call.</span></span>
 <span class="line"><span style="color:#6E7781">       * Instead, we provide `pageContext` to make the pre-rendering build step faster.</span></span>
 <span class="line"><span style="color:#6E7781">       */</span></span>

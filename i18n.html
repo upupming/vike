@@ -61,7 +61,7 @@
 <li>
 <p><code>Accept-Language: fr-FR</code> headers</p>
 <blockquote>
-<p>The <code>Accept-Language</code> header can be used for redirecting the user to the right localized URL (e.g. URL <code>/about</code> + Header <code>Accept-Language: de-DE</code> =&gt; redirect to <code>/de-DE/about</code>). Once the user is redirected to a localized URL, we can use the technique described above. We can perform the redirection by using our server (e.g. Express.js) independently of vike.</p>
+<p>The <code>Accept-Language</code> header can be used for redirecting the user to the right localized URL (e.g. URL <code>/about</code> + Header <code>Accept-Language: de-DE</code> =&gt; redirect to <code>/de-DE/about</code>). Once the user is redirected to a localized URL, we can use the technique described above. We can perform the redirection by using our server (e.g. Express.js) independently of Vike.</p>
 </blockquote>
 <blockquote>
 <p>Using the <code>Accept-Language</code> header to show different languages for the same URL is considered bad practice for both SEO and UX reasons. It&#x27;s recommended to use <code>Accept-Language</code> only to redirect the user.</p>
@@ -122,7 +122,7 @@
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <p>We basically use <code>prerender()</code> to determine URLs and/or load data, and use <code>onBeforePrerender()</code> merely to manipulate the URLs and set <code>pageContext.locale</code>.</p>
 <blockquote>
-<p>Despite what the naming suggests, note that vike calls our <code>onBeforePrerender()</code> hook <em>after</em> our <code>prerender()</code> hooks. Also note that <code>onBeforePrerender(prerenderContext)</code> is a global hook we can define only once, while <code>prerender()</code> (it doesn&#x27;t have any argument) is a per-page hook we can define multiple times.</p>
+<p>Despite what the naming suggests, note that Vike calls our <code>onBeforePrerender()</code> hook <em>after</em> our <code>prerender()</code> hooks. Also note that <code>onBeforePrerender(prerenderContext)</code> is a global hook we can define only once, while <code>prerender()</code> (it doesn&#x27;t have any argument) is a per-page hook we can define multiple times.</p>
 </blockquote>
 <p>Alternatively, if we need to load data that depends on localization, instead of <code>onBeforePrerender()</code> we can use <code>prerender()</code> to localize <code>pageContext</code>:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product.page.server.js</span></span>

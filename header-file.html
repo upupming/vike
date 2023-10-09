@@ -60,7 +60,7 @@
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> onRenderHtml </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./some-other-file&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> { </span><span style="color:#24292F">onRenderHtml</span><span style="color:#953800">, </span><span style="color:#24292F">onRenderClient </span><span style="color:#953800">}</span></span></code></pre></div>
-<p>Using <code>&#x27;import:./some-file&#x27;</code> instead of a real import <code>import onRenderClient from &#x27;./some-file&#x27;</code> enables vike to load the <code>onRenderClient()</code> hook only when needed and in the right environment.</p>
+<p>Using <code>&#x27;import:./some-file&#x27;</code> instead of a real import <code>import onRenderClient from &#x27;./some-file&#x27;</code> enables Vike to load the <code>onRenderClient()</code> hook only when needed and in the right environment.</p>
 </blockquote>
 <h2 id="optional">Optional</h2>
 <p>As mentioned in the previous section, <code>.h.js</code> files are optional.</p>
@@ -115,7 +115,7 @@
 <span class="line"><span style="color:#6E7781">// This import has no effect. (CSS should be imported in runtime code such as +Page.js instead.)</span></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./some.css&#x27;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This log is printed only when vike reads +config.h.js files. It</span></span>
+<span class="line"><span style="color:#6E7781">// This log is printed only when Vike reads +config.h.js files. It</span></span>
 <span class="line"><span style="color:#6E7781">// isn&#x27;t included in the client nor the server runtime.</span></span>
 <span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(something) </span><span style="color:#6E7781">// Prints: &#x27;import:./some-file:something&#x27;</span></span>
 <span class="line"></span>

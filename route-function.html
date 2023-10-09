@@ -102,7 +102,7 @@
 <blockquote>
 <p>This authentication routing trick is further explained at <a href="/auth#login-flow">Guides<!-- --> &gt; <!-- -->Authentication<!-- --> &gt; <!-- -->Login flow</a>.</p>
 </blockquote>
-<p>Vike cannot know whether another Route Function will return a higher precedence number, therefore vike has to execute all Route Functions.</p>
+<p>Vike cannot know whether another Route Function will return a higher precedence number, therefore Vike has to execute all Route Functions.</p>
 <p>If you use <a href="/client-routing">Client Routing</a>, then <em>all</em> your Route Functions are loaded in the browser. This means that if a Route Function imports a lot of code, then all that code is loaded on the client-side of <em>every</em> page. A heavy Route Function slows down your whole app.</p>
 <p>Route Functions should be lightweight and fast.</p>
 <h2 id="async">Async</h2>
@@ -136,13 +136,13 @@ todo/pages/create.page.route.js
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> () </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// This is forbidden and vike will throw an error</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// This is forbidden and Vike will throw an error</span></span>
 <span class="line"><span style="color:#24292F">    pageContext: {</span></span>
 <span class="line"><span style="color:#24292F">      some: </span><span style="color:#0A3069">&#x27;value&#x27;</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<p>In principle, vike could support providing <code>pageContext</code> values but it deliberately doesn&#x27;t support it in order to foster lightweight Route Functions.</p>
+<p>In principle, Vike could support providing <code>pageContext</code> values but it deliberately doesn&#x27;t support it in order to foster lightweight Route Functions.</p>
 <blockquote>
 <p>As explained in <a href="#lightweight-fast">Lightweight &amp; fast</a>, you should keep Route Functions simple and you shouldn&#x27;t implement complex logic in <code>.page.route.js</code> files.</p>
 </blockquote>

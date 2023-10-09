@@ -26,7 +26,7 @@
 <p>If <code>throw redirect()</code> or <code>throw render()</code> doesn&#x27;t work:</p>
 <ul>
 <li><strong>Make sure <code>throw redirect()</code> / <code>throw render()</code> isn&#x27;t swallowed.</strong><br/>
-<!-- -->In developement, check your server logs for the following log. If this log is missing then this means that vike didn&#x27;t receive the <code>throw redirect()</code> / <code>throw render()</code> exception: some other code is catching and swallowing it.<!-- -->
+<!-- -->In developement, check your server logs for the following log. If this log is missing then this means that Vike didn&#x27;t receive the <code>throw redirect()</code> / <code>throw render()</code> exception: some other code is catching and swallowing it.<!-- -->
 <pre><code>10:00:00 AM [vike][request(42)] throw redirect(&#x27;/some-url&#x27;) intercepted while
 rendering /some-other-url
 </code></pre>
@@ -35,7 +35,7 @@ rendering /some-other-url
 <p>If <code>throw redirect()</code> doesn&#x27;t work:</p>
 <ul>
 <li><strong>Make sure to add <code>pageContext.httpResponse.headers</code> to the HTTP response.</strong><br/>
-<!-- -->If you&#x27;ve embedded vike into your server using <a href="/renderPage"><code>renderPage()</code></a>, then insepct whether <code>pageContext.httpResponse.headers</code> contains the <code>Location</code> header and double check that you&#x27;re correctly adding all the headers defined by <code>pageContext.httpResponse.headers</code> to the HTTP response.</li>
+<!-- -->If you&#x27;ve embedded Vike into your server using <a href="/renderPage"><code>renderPage()</code></a>, then insepct whether <code>pageContext.httpResponse.headers</code> contains the <code>Location</code> header and double check that you&#x27;re correctly adding all the headers defined by <code>pageContext.httpResponse.headers</code> to the HTTP response.</li>
 </ul><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/abort.page.server.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>

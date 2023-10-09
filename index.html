@@ -29,13 +29,13 @@
 <div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about.page.js</span></span>
 <span class="line"><span style="color:#6E7781">// Environment: browser and server</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// vike uses Filesystem Routing: the file `/pages/about.page.js` matches the URL `/about`.</span></span>
+<span class="line"><span style="color:#6E7781">// Vike uses Filesystem Routing: the file `/pages/about.page.js` matches the URL `/about`.</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6E7781">// `Page` can be anything you want — typically a React/Vue/Svelte/... component.</span></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Page</span><span style="color:#24292F">() {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> &lt;&gt;</span></span>
 <span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;About&lt;/</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">p</span><span style="color:#24292F">&gt;This is our first vike app.&lt;/</span><span style="color:#116329">p</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">p</span><span style="color:#24292F">&gt;This is our first Vike app.&lt;/</span><span style="color:#116329">p</span><span style="color:#24292F">&gt;</span></span>
 <span class="line"><span style="color:#24292F">  &lt;/&gt;</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/_default.page.server.js</span></span>
@@ -48,7 +48,7 @@
 <span class="line"><span style="color:#6E7781">// You control how `Page` is rendered to HTML</span></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">render</span><span style="color:#24292F">({ </span><span style="color:#953800">Page</span><span style="color:#24292F"> }) {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageHtml</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToHtml</span><span style="color:#24292F">(Page)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">title</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;My first vike app&#x27;</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">title</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;My first Vike app&#x27;</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;!DOCTYPE html&gt;</span></span>
 <span class="line"><span style="color:#0A3069">    &lt;html&gt;</span></span>
 <span class="line"><span style="color:#0A3069">      &lt;head&gt;</span></span>

@@ -111,7 +111,7 @@
 <span class="line"></span>
 <span class="line"><span style="color:#6E7781">// ❌ This is forbidden</span></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#CF222E">async</span><span style="color:#953800"> () </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{ </span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F"> }</span></span></code></pre></div>
-<p>The motivation for having an asynchronous Route Function is usually to implement redirection and/or protecting a private page. Instead use <a href="/render"><code>throw render()</code></a> or <a href="/redirect"><code>throw redirect()</code></a> with an async <a href="/guard"><code>guard()</code></a> or <a href="/onBeforeRender"><code>onBeforeRender()</code></a> hook.</p>
+<p>The motivation for having an asynchronous Route Function is usually to implement redirection and/or protecting a private page. Instead, use <a href="/render"><code>throw render()</code></a> or <a href="/redirect"><code>throw redirect()</code></a> with an async <a href="/guard"><code>guard()</code></a> or <a href="/onBeforeRender"><code>onBeforeRender()</code></a> hook.</p>
 <blockquote>
 <p>An asynchronous Route Function would slow down your entire app: as explained in <a href="#lightweight-fast">Lightweight &amp; fast</a>, every time the user navigates to a new page <em>all</em> Route Functions are called. This means that a slow Route Function slows down <em>all</em> pages.</p>
 </blockquote>

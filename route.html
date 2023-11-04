@@ -44,14 +44,14 @@
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { route }</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">route</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">const</span><span style="color:#24292F"> </span><span style="color:#953800">parts</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.urlPathname.</span><span style="color:#8250DF">split</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">if</span><span style="color:#24292F"> (</span><span style="color:#953800">parts</span><span style="color:#24292F">[</span><span style="color:#0550AE">1</span><span style="color:#24292F">] !== </span><span style="color:#0A3069">&#x27;product&#x27;</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">route</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">parts</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.urlPathname.</span><span style="color:#8250DF">split</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/&#x27;</span><span style="color:#24292F">)</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (parts[</span><span style="color:#0550AE">1</span><span style="color:#24292F">] </span><span style="color:#CF222E">!==</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;product&#x27;</span><span style="color:#24292F">) {</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#24292F">  } </span><span style="color:#953800">else</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#953800">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#953800">routeParams</span><span style="color:#CF222E">:</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#953800">id</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">parts</span><span style="color:#24292F">[</span><span style="color:#0550AE">2</span><span style="color:#24292F">]</span></span>
+<span class="line"><span style="color:#24292F">  } </span><span style="color:#CF222E">else</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">      routeParams: {</span></span>
+<span class="line"><span style="color:#24292F">        id: parts[</span><span style="color:#0550AE">2</span><span style="color:#24292F">]</span></span>
 <span class="line"><span style="color:#24292F">      }</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>

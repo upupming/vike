@@ -39,7 +39,7 @@
 <span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">render</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `Page` is the `export { Page }` of our `*.page.js` files;</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Vike doesn&#x27;t do anything with `Page` and just makes it available as</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `pageContex.Page`; we can export any `Page` value we want and do whatever we want with it.</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `pageContext.Page`; we can export any `Page` value we want and do whatever we want with it.</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We control how we use our UI framework to render our pages to HTML</span></span>
@@ -65,7 +65,7 @@
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { hydrateDom } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#24292F">async </span><span style="color:#8250DF">render</span><span style="color:#24292F">(pageContex) {</span></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">render</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We control how our pages are hydrated</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">hydrateDom</span><span style="color:#24292F">(Page)</span></span>
@@ -89,16 +89,16 @@
 <span class="line"><span style="color:#6E7781">// And also for initializing a Service Worker.</span></span>
 <span class="line"><span style="color:#24292F">navigator.serviceWorker.</span><span style="color:#8250DF">register</span><span style="color:#24292F">(</span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F">)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#24292F">async </span><span style="color:#8250DF">render</span><span style="color:#24292F">(pageContex) {</span></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">render</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Here we can integrate performance measurement tools, e.g. to measure hydration performance</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContex</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">hydrateDom</span><span style="color:#24292F">(Page)</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">init</span><span style="color:#24292F">()</span></span>
 <span class="line"><span style="color:#24292F">}</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">init</span><span style="color:#24292F">() {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// After hydration we usually initialize vanilla JS component libraries, for example tooltips</span></span>
-<span class="line"><span style="color:#24292F">  tooltip.</span><span style="color:#8250DF">init</span><span style="color:#24292F">(document.</span><span style="color:#8250DF">querySelectorAll</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;.tooltip&#x27;</span><span style="color:#24292F">)</span></span>
+<span class="line"><span style="color:#24292F">  tooltip.</span><span style="color:#8250DF">init</span><span style="color:#24292F">(document.</span><span style="color:#8250DF">querySelectorAll</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;.tooltip&#x27;</span><span style="color:#24292F">))</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Or some vanilla JS modal library</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">$</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;.my-modals&#x27;</span><span style="color:#24292F">).</span><span style="color:#8250DF">modal</span><span style="color:#24292F">()</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>

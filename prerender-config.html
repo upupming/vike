@@ -26,13 +26,13 @@
 <span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">vike</span><span style="color:#24292F">({</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Use the default pre-render config:</span></span>
-<span class="line"><span style="color:#24292F">      prerender: </span><span style="color:#0550AE">true</span></span>
+<span class="line"><span style="color:#24292F">      prerender: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Deviate from the default pre-render config:</span></span>
 <span class="line"><span style="color:#24292F">      prerender: {</span></span>
-<span class="line"><span style="color:#24292F">        partial?: boolean</span></span>
-<span class="line"><span style="color:#24292F">        noExtraDir</span><span style="color:#CF222E">?:</span><span style="color:#24292F"> boolean</span></span>
-<span class="line"><span style="color:#24292F">        parallel</span><span style="color:#CF222E">?:</span><span style="color:#24292F"> boolean </span><span style="color:#CF222E">|</span><span style="color:#24292F"> number</span></span>
-<span class="line"><span style="color:#24292F">        disableAutoRun</span><span style="color:#CF222E">?:</span><span style="color:#24292F"> boolean</span></span>
+<span class="line"><span style="color:#24292F">        partial?: boolean,</span></span>
+<span class="line"><span style="color:#24292F">        noExtraDir?: boolean,</span></span>
+<span class="line"><span style="color:#24292F">        parallel?: boolean </span><span style="color:#CF222E">|</span><span style="color:#24292F"> number,</span></span>
+<span class="line"><span style="color:#24292F">        disableAutoRun?: boolean</span></span>
 <span class="line"><span style="color:#24292F">      }</span></span>
 <span class="line"><span style="color:#24292F">    })</span></span>
 <span class="line"><span style="color:#24292F">  ]</span></span>
@@ -64,7 +64,7 @@ But some static hosts prefer the other way.</p>
 <p>Disable concurrency if:</p>
 <ul>
 <li>You encounter <code>JavaScript heap out of memory</code> errors.</li>
-<li>If pre-rendering takes an abnormal high amount of time. (Caused by the very slow process of memory swapping that kicks-in when memory starts to saturates).</li>
+<li>If pre-rendering takes an abnormal high amount of time. (Caused by the very slow process of memory swapping that kicks-in when memory starts to saturate).</li>
 </ul>
 </blockquote>
 <h2 id="disableautorun"><code>disableAutoRun</code></h2>

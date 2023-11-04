@@ -33,7 +33,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Web Streams</a></li>
 </ul>
 <h2 id="basics">Basics</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderer/_deault.page.server.js</span></span>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderer/_default.page.server.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { render }</span></span>
 <span class="line"></span>
@@ -141,7 +141,7 @@
 <span class="line"><span style="color:#24292F">res.</span><span style="color:#8250DF">send</span><span style="color:#24292F">(body)</span></span></code></pre></div>
 <h2 id="stream-pipes">Stream pipes</h2>
 <p>To be able to use stream pipes, we need to use <code>stampPipe()</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderer/_deault.page.server.js</span></span>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderer/_default.page.server.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { render }</span></span>
 <span class="line"></span>
@@ -179,7 +179,7 @@
 <span class="line"><span style="color:#24292F">httpResponse.</span><span style="color:#8250DF">pipe</span><span style="color:#24292F">(writable)</span></span>
 <span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">resp</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#8250DF">Response</span><span style="color:#24292F">(readable)</span></span></code></pre></div>
 <p>For some UI frameworks, such as Vue, we need a pipe wrapper:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderer/_deault.page.server.js</span></span>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderer/_default.page.server.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { pipePageToWritable } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { stampPipe, escapeInject } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
@@ -205,7 +205,7 @@
 <p>Some data fetching tools, such as <a href="/relay">Relay</a> and <a href="https://vuejs.org/api/composition-api-lifecycle.html#onserverprefetch">Vue&#x27;s <code>onServerPrefetch()</code></a>, collect data during the stream.</p>
 <p>Consequently, we can determine the initial data (passed to the browser) only after the stream has ended.</p>
 <p>In such situations, we can return a <code>pageContext</code> async function in our <code>render()</code> hook:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderer/_deault.page.server.js</span></span>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderer/_default.page.server.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { render }</span></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { passToClient }</span></span>

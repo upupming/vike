@@ -85,7 +85,7 @@
 <p><strong><code>pageContext.is404</code></strong>: If an error occurs, whether the error is a <code>404 Page Not Found</code> or a <code>500 Internal Error</code>, see <a href="/error-page">API<!-- --> &gt; <code>_error.page.js</code></a>.</p>
 </li>
 <li>
-<p><strong><code>pageContext.isClientSideNavigation</code></strong>: Whether the page was navigated by the the client-side router. In other words, when using <a href="/client-routing">Client Routing</a>, the value is <code>false</code> for the first page the user visits, and <code>true</code> for any subsequent navigation. (When using <a href="/server-routing">Server Routing</a>, the value is always <code>false</code>.)</p>
+<p><strong><code>pageContext.isClientSideNavigation</code></strong>: Whether the page was navigated by the client-side router. In other words, when using <a href="/client-routing">Client Routing</a>, the value is <code>false</code> for the first page the user visits, and <code>true</code> for any subsequent navigation. (When using <a href="/server-routing">Server Routing</a>, the value is always <code>false</code>.)</p>
 </li>
 <li>
 <p><strong><code>pageContext.abortReason</code></strong>: Set by <a href="/render"><code>throw render()</code></a> and used by the <a href="/error-page">error page</a>.</p>
@@ -105,7 +105,7 @@
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// **** Custom pageContext properties ****</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ***************************************</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Common use case: make fetched data available over pageContext</span></span>
-<span class="line"><span style="color:#24292F">      someData: { product: { id: </span><span style="color:#0550AE">123</span><span style="color:#24292F">, name: </span><span style="color:#0A3069">&#x27;MacBook&#x27;</span><span style="color:#24292F"> } }</span></span>
+<span class="line"><span style="color:#24292F">      someData: { product: { id: </span><span style="color:#0550AE">123</span><span style="color:#24292F">, name: </span><span style="color:#0A3069">&#x27;MacBook&#x27;</span><span style="color:#24292F"> } },</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Or any other custom property you want</span></span>
 <span class="line"><span style="color:#24292F">      someCustomProp: </span><span style="color:#0A3069">&#x27;some-value&#x27;</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
@@ -180,7 +180,7 @@
 <h2 id="typescript">TypeScript</h2>
 <div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in client and server</span></span>
-<span class="line"><span style="color:#24292F">  PageContext</span></span>
+<span class="line"><span style="color:#24292F">  PageContext,</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in client only</span></span>
 <span class="line"><span style="color:#24292F">  PageContextClient,</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in server only</span></span>

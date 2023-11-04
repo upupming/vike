@@ -50,7 +50,7 @@
 </li>
 </ul>
 <p><strong>2. <code>render()</code> hooks (SPA only)</strong></p>
-<p>If we only have SPA pages, then we adapt our <code>render()</code> hooks like the folllowing.</p>
+<p>If we only have SPA pages, then we adapt our <code>render()</code> hooks like the following.</p>
 <p>Client-side <code>render()</code> hook:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/_default.page.client.js</span></span>
 <span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
@@ -82,7 +82,7 @@
 <span class="line"><span style="color:#0A3069">    &lt;/body&gt;</span></span>
 <span class="line"><span style="color:#0A3069">  &lt;/html&gt;`</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<p>This is the key difference between SPA and SSR: in SPA <code>div#root</code> is empty, whereas with SSR <code>div#root</code> contains our Page&#x27;s root component <code>pageContext.Page</code> rendererd to HTML.</p>
+<p>This is the key difference between SPA and SSR: in SPA <code>div#root</code> is empty, whereas with SSR <code>div#root</code> contains our Page&#x27;s root component <code>pageContext.Page</code> rendered to HTML.</p>
 <p>This means that, with SPA, we use our server-side <code>render()</code> hook to generate HTML that is just an empty shell: the HTML doesn&#x27;t contain the page&#x27;s content.</p>
 <p>For production, we usually want to <a href="/pre-rendering">pre-render</a> the HTML of our SPA pages in order to remove the need for a production Node.js server.</p>
 <p>We can also use our server-side <code>render()</code> hook to render <code>&lt;head&gt;</code>:</p>
@@ -114,7 +114,7 @@
 <span class="line"><span style="color:#24292F">  description: </span><span style="color:#0A3069">&#x27;My App is ...&#x27;</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <p>Note how we define <code>pageContext.exports.meta</code> in <code>about.page.js</code> instead of <code>about.page.client.js</code>. That&#x27;s because we need to be able to access <code>pageContext.exports.meta</code> from the server-side.</p>
-<p>This means that we define both <code>about.page.js</code> (defining meta data) and <code>about.page.client.js</code> (defining our page&#x27;s root component <code>pageContext.Page</code>).</p>
+<p>This means that we define both <code>about.page.js</code> (defining metadata) and <code>about.page.client.js</code> (defining our page&#x27;s root component <code>pageContext.Page</code>).</p>
 <p><strong>2. <code>render()</code> hooks (SPA + SSR)</strong></p>
 <p>If we have both SPA and SSR pages, then we adapt our <code>render()</code> hooks like this:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/_default.page.server.js</span></span>

@@ -69,8 +69,6 @@ hydrate the DOM only when rendering the first page.</li>
 <span class="line"><span style="color:#6E7781">// subsequent page navigation).</span></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onHydrationEnd }</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#24292F">the user navigates to the </span><span style="color:#8250DF">render</span><span style="color:#24292F">() hook the first page finishes rendering </span><span style="color:#8250DF">render</span><span style="color:#24292F">())</span></span>
-<span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToDom, hydrateDom } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">render</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
@@ -84,7 +82,6 @@ hydrate the DOM only when rendering the first page.</li>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// We render a new page. (When the user navigates to a new page.)</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToDom</span><span style="color:#24292F">(pageContext.Page)</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">}</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onPageTransitionStart</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
@@ -258,8 +255,8 @@ This means that static assets are often already loaded before even the user clic
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onHydrationEnd }</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  OnPageTransitionStartAsync</span></span>
-<span class="line"><span style="color:#24292F">  OnPageTransitionEndAsync</span></span>
+<span class="line"><span style="color:#24292F">  OnPageTransitionStartAsync,</span></span>
+<span class="line"><span style="color:#24292F">  OnPageTransitionEndAsync,</span></span>
 <span class="line"><span style="color:#24292F">  OnHydrationEndAsync</span></span>
 <span class="line"><span style="color:#24292F">} </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
 <span class="line"></span>

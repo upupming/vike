@@ -89,12 +89,12 @@ then we can pre-render our app without defining any <code>prerender()</code> hoo
 <span class="line"><span style="color:#24292F">      pageProps: {</span></span>
 <span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// We filter out the data we don&#x27;t need in order to minimize what is sent to the browser.</span></span>
 <span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// We explain this practice at https://vike.dev/data-fetching</span></span>
-<span class="line"><span style="color:#24292F">        movieList: movies.</span><span style="color:#8250DF">map</span><span style="color:#24292F">(({</span><span style="color:#953800">id</span><span style="color:#24292F">, </span><span style="color:#953800">title</span><span style="color:#24292F">}) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> ({id, title})</span></span>
+<span class="line"><span style="color:#24292F">        movieList: movies.</span><span style="color:#8250DF">map</span><span style="color:#24292F">(({</span><span style="color:#953800">id</span><span style="color:#24292F">, </span><span style="color:#953800">title</span><span style="color:#24292F">}) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> ({id, title}))</span></span>
 <span class="line"><span style="color:#24292F">      }</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#24292F">  return [movieListPage, </span><span style="color:#CF222E">...</span><span style="color:#24292F">moviePages]</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> [movieListPage, </span><span style="color:#CF222E">...</span><span style="color:#24292F">moviePages]</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <p>Essentially, the <code>prerender()</code> hook allows us to prefetch data for multiple pages at once.</p>
 <blockquote>

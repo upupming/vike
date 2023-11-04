@@ -92,7 +92,7 @@
 <span class="line"><span style="color:#24292F">    onBeforeRender: {</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// By default, the onBeforeRender() hook is always loaded and executed only on the</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// server-side. By using the meta config we can make it isomorphic instead:</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// onBeforeRender() is loaded and executed as well on the cient-side.</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// onBeforeRender() is loaded and executed as well on the client-side.</span></span>
 <span class="line"><span style="color:#24292F">      env: </span><span style="color:#0A3069">&#x27;server-and-client&#x27;</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
@@ -105,11 +105,11 @@
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Config, Effect } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">onBeforeRenderIsomorphEffect</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">Effect</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> ({ configDefinedAt, configValue }) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">if</span><span style="color:#24292F"> (</span><span style="color:#953800">typeof</span><span style="color:#24292F"> </span><span style="color:#953800">configValue</span><span style="color:#24292F"> !== </span><span style="color:#0A3069">&#x27;boolean&#x27;</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRenderIsomorphEffect</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">Effect</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> ({ </span><span style="color:#953800">configDefinedAt</span><span style="color:#24292F">, </span><span style="color:#953800">configValue</span><span style="color:#24292F"> }) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">typeof</span><span style="color:#24292F"> configValue </span><span style="color:#CF222E">!==</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;boolean&#x27;</span><span style="color:#24292F">) {</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">throw</span><span style="color:#24292F"> </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#0550AE">Error</span><span style="color:#24292F">(</span><span style="color:#0A3069">`${</span><span style="color:#24292F">configDefinedAt</span><span style="color:#0A3069">} should be a boolean`</span><span style="color:#24292F">)</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">if</span><span style="color:#24292F"> (</span><span style="color:#953800">configValue</span><span style="color:#24292F"> === </span><span style="color:#953800">true</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (configValue </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0550AE">true</span><span style="color:#24292F">) {</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">      meta: {</span></span>
 <span class="line"><span style="color:#24292F">        onBeforeRender: {</span></span>
@@ -132,7 +132,7 @@
 <ul>
 <li><a href="https://github.com/vikejs/vike/blob/01cc674498ea8baa289bfccb633d04b4d6cc7958/examples/react-full-v1/">/examples/react-full-v1/</a>
 <ul>
-<li>Config defintion: <a href="https://github.com/vikejs/vike/blob/01cc674498ea8baa289bfccb633d04b4d6cc7958/examples/react-full-v1/renderer/+config.h.ts#L14-L33">/renderer/+config.h.ts &gt; <code>meta.onBeforeRenderIsomorph</code></a></li>
+<li>Config definition: <a href="https://github.com/vikejs/vike/blob/01cc674498ea8baa289bfccb633d04b4d6cc7958/examples/react-full-v1/renderer/+config.h.ts#L14-L33">/renderer/+config.h.ts &gt; <code>meta.onBeforeRenderIsomorph</code></a></li>
 <li>Config usage: <a href="https://github.com/vikejs/vike/blob/01cc674498ea8baa289bfccb633d04b4d6cc7958/examples/react-full-v1/pages/star-wars/@id/+onBeforeRenderIsomorph.ts">/pages/star-wars/@id/+onBeforeRenderIsomorph.ts</a></li>
 </ul>
 </li>

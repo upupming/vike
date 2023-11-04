@@ -21,7 +21,7 @@ we define a new page by creating a new <code>.page.jsx</code> file.</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/index.page.jsx</span></span>
 <span class="line"><span style="color:#6E7781">// Environment: browser and server</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> React, { useState } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;react&quot;</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> React </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;react&quot;</span><span style="color:#24292F">;</span></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { Counter } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;../components/Counter&quot;</span><span style="color:#24292F">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Page };</span></span>
@@ -150,7 +150,7 @@ which means that we can now create a new page just by defining a new <code>.page
 <span class="line"><span style="color:#24292F">  };</span></span>
 <span class="line"><span style="color:#24292F">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// By default `pageContext` is available only on the server. But our hydrate function</span></span>
+<span class="line"><span style="color:#6E7781">// By default, `pageContext` is available only on the server. But our hydrate function</span></span>
 <span class="line"><span style="color:#6E7781">// we defined earlier runs in the browser and needs `pageContext.pageProps`; we use</span></span>
 <span class="line"><span style="color:#6E7781">// `passToClient` to tell Vike to serialize and make `pageContext.pageProps`</span></span>
 <span class="line"><span style="color:#6E7781">// available to the browser.</span></span>

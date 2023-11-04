@@ -106,8 +106,8 @@
 <p>For HTML streams use <code>httpResponse.pipe()</code> instead of <code>pageContext.httpResponse.body</code>, see <a href="/stream">Guides<!-- --> &gt; <!-- -->HTML Streaming</a>.</p>
 <p>The <code>pageContext.httpResponse</code> value is <code>null</code> if:</p>
 <ul>
-<li>An error occured while rendering the page and no <a href="/error-page">error page</a> is defined.</li>
-<li>An error occured while rendering the error page.</li>
+<li>An error occurred while rendering the page and no <a href="/error-page">error page</a> is defined.</li>
+<li>An error occurred while rendering the error page.</li>
 <li>Vike skips certain URLs, such as <code>/favicon.ico</code> (because browsers automatically make favicon requests).</li>
 </ul>
 <p>The <code>renderPage()</code> function doesn&#x27;t depend on Node.js and you can use <code>renderPage()</code> (and therefore embed Vike) anywhere:</p>

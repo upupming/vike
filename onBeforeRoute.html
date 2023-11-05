@@ -22,10 +22,8 @@
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">urlWithoutLocale</span><span style="color:#24292F">, </span><span style="color:#0550AE">locale</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">extractLocale</span><span style="color:#24292F">(pageContext.urlOriginal)</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// We make `locale` available as `pageContext.locale`</span></span>
 <span class="line"><span style="color:#24292F">      locale,</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// We overwrite the original URL</span></span>
-<span class="line"><span style="color:#24292F">      urlOriginal: urlWithoutLocale</span></span>
+<span class="line"><span style="color:#24292F">      urlLogical: urlWithoutLocale</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
@@ -46,10 +44,8 @@
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">urlWithoutLocale</span><span style="color:#24292F">, </span><span style="color:#0550AE">locale</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">extractLocale</span><span style="color:#24292F">(pageContext.urlOriginal)</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// We make `locale` available as `pageContext.locale`</span></span>
 <span class="line"><span style="color:#24292F">      locale,</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// We overwrite the original URL</span></span>
-<span class="line"><span style="color:#24292F">      urlOriginal: urlWithoutLocale</span></span>
+<span class="line"><span style="color:#24292F">      urlLogical: urlWithoutLocale</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>

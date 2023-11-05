@@ -25,8 +25,12 @@
 <span class="line"><span style="color:#24292F">    pageContext: {</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// We make `locale` available as `pageContext.locale`</span></span>
 <span class="line"><span style="color:#24292F">      locale,</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// We overwrite `pageContext.urlOriginal`</span></span>
-<span class="line"><span style="color:#24292F">      urlOriginal: urlWithoutLocale</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// When pageContext.urlLogical is set, then Vike&#x27;s router uses the value of</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// pageContext.urlLogical instead of pageContext.urlOriginal</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// In other words:</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">//  - pageContext.urlOriginal =&gt; with locale, e.g. /en-US/movies</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">//  - pageContext.urlLogical =&gt; without locale, e.g. /movies</span></span>
+<span class="line"><span style="color:#24292F">      urlLogical: urlWithoutLocale</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">}</span></span>

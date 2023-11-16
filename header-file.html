@@ -26,7 +26,7 @@
 <p><code>+config.h.js</code> files are part of the <a href="/migration/v1-design">V1 design</a>.</p>
 </blockquote>
 <h2 id="transformation">Transformation</h2>
-<p>Vike transforms <code>.h.js</code> files, such as this:</p>
+<p>Vike transforms <code>.h.js</code> files such as:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+config.h.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> Page </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./some-file&#x27;</span></span>
@@ -50,16 +50,7 @@
 <p><code>.h.js</code> files are only meant for config files (i.e. any <code>.h.js</code> file should be a <code>+config.h.js</code> file).</p>
 </blockquote>
 <h2 id="why">Why</h2>
-<p>Instead of <code>+config.h.js</code> we can define <code>+config.js</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">Page: </span><span style="color:#0A3069">&#x27;import:./some-file&#x27;</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">onBeforeRender: </span><span style="color:#0A3069">&#x27;import:./some-other-file&#x27;</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<p>But then we lose IntelliSense such as auto-import, refactoring, type safety, and go-to-definition. That&#x27;s why we recommend to define <code>+config.h.js</code> instead of <code>+config.js</code>.</p>
-<blockquote>
-<p>Real imports cannot be used. Consider this example:</p>
+<p>Consider this example:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// +config.h.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6E7781">// onRenderClient() should be loaded only on the client-side</span></span>
@@ -68,30 +59,16 @@
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> onRenderHtml </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./some-other-file&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> { </span><span style="color:#24292F">onRenderHtml</span><span style="color:#953800">, </span><span style="color:#24292F">onRenderClient </span><span style="color:#953800">}</span></span></code></pre></div>
-<p>Using <code>&#x27;import:./some-file&#x27;</code> instead of a real import <code>import onRenderClient from &#x27;./some-file&#x27;</code> enables Vike to load the <code>onRenderClient()</code> hook only when needed and in the right environment.</p>
-</blockquote>
+<p>Using <code>&#x27;import:./some-file&#x27;</code> instead of a real import <code>import onRenderClient from &#x27;./some-file&#x27;</code> enables Vike to load the hook <code>onRenderClient()</code> in the right environment.</p>
 <h2 id="optional">Optional</h2>
-<p>As mentioned in the previous section, <code>.h.js</code> files are optional.</p>
-<p>Instead of defining a <code>+config.h.ts</code> file:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+config.h.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Config } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> Page </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./some-file&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { onBeforeRender } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./some-other-file&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">Page</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">onBeforeRender</span></span>
-<span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
-<p>We can define a <code>+config.ts</code> file (without <code>.h</code>):</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+config.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Config } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
+<p>Instead of <code>+config.h.js</code> you can define a <code>+config.js</code> file (without <code>.h</code>):</p>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+config.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
 <span class="line"><span style="color:#953800">  </span><span style="color:#24292F">Page: </span><span style="color:#0A3069">&#x27;import:./some-file&#x27;</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">onBeforeRender: </span><span style="color:#0A3069">&#x27;import:./some-other-file:onBeforeRender&#x27;</span></span>
-<span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
+<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">onBeforeRender: </span><span style="color:#0A3069">&#x27;import:./some-other-file&#x27;</span></span>
+<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<p>But you lose IntelliSense (auto-import, refactoring, type safety, go-to-definition, ...) and that&#x27;s why we recommend using <code>+config.h.js</code> instead of <code>+config.js</code>.</p>
 <h2 id="inline-hooks-code">Inline hooks code</h2>
 <p>Following is forbidden:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+config.h.js</span></span>
@@ -118,17 +95,17 @@
 <p>If an import isn&#x27;t re-exported by <code>export default { ... }</code>, then it won&#x27;t be included in any runtime.</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// +config.h.js</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// These two imports aren&#x27;t included in any runtime.</span></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { something } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./some-file&#x27;</span></span>
-<span class="line"><span style="color:#6E7781">// This import has no effect. (CSS should be imported in runtime code such as +Page.js instead.)</span></span>
+<span class="line"><span style="color:#6E7781">// CSS imports have no effect at all here. (You should import CSS files in runtime code</span></span>
+<span class="line"><span style="color:#6E7781">// such as +Page.js instead.)</span></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./some.css&#x27;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This log is printed only when Vike reads +config.h.js files. It</span></span>
-<span class="line"><span style="color:#6E7781">// isn&#x27;t included in the client nor the server runtime.</span></span>
+<span class="line"><span style="color:#6E7781">// This log is printed only when Vike reads +config.h.js files: it isn&#x27;t included in the</span></span>
+<span class="line"><span style="color:#6E7781">// client runtime nor server runtime.</span></span>
 <span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(something) </span><span style="color:#6E7781">// Prints: &#x27;import:./some-file:something&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// `something` isn&#x27;t re-exported here</span></span>
+<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// `something` isn&#x27;t re-exported here =&gt; `something` isn&#x27;t included in any runtime.</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/header-file.page.server.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>

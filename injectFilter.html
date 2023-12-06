@@ -35,9 +35,9 @@
 </ul>
 <h2 id="usage">Usage</h2>
 <blockquote>
-<p><code>injectFilter()</code> is called only in production: it has no effect in development. (Because, in development, the dependency graph is <a href="/lazy-transpiling">lazily discovered</a> and therefore not fully known upon rendering HTML.)
-<blockquote class="custom-icon type-warning note-color-yellow"><div style="margin-bottom:20px"></div><img style="height: 1.275em; width: 1.275em; vertical-align: -20%" draggable="false" alt="⚠" src="https://twemoji.maxcdn.com/v/13.1.1/svg/26a0.svg"/><!-- --> <div class="blockquote-content"><code>injectFilter()</code> is a beta feature. (Which means breaking changes may occur during any minor version update.)</div><div style="margin-top:20px"></div></blockquote></p>
+<p><code>injectFilter()</code> is called only in production: it has no effect in development. (Because, in development, the dependency graph is <a href="/lazy-transpiling">lazily discovered</a> and therefore not fully known upon rendering HTML.)</p>
 </blockquote>
+<blockquote class="custom-icon type-warning note-color-yellow"><div style="margin-bottom:20px"></div><img style="height: 1.275em; width: 1.275em; vertical-align: -20%" draggable="false" alt="⚠" src="https://twemoji.maxcdn.com/v/13.1.1/svg/26a0.svg"/><!-- --> <div class="blockquote-content"><code>injectFilter()</code> is a beta feature. (Which means breaking changes may occur during any minor version update.)</div><div style="margin-top:20px"></div></blockquote>
 <div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.ts</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>

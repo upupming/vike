@@ -28,7 +28,7 @@ import { extensionsAssets } from './plugins/extensionsAssets.js'
 import { baseUrls } from './plugins/baseUrls.js'
 import { envVarsPlugin } from './plugins/envVars.js'
 import pc from '@brillout/picocolors'
-import { serverEntry } from './plugins/serverEntryPlugin.js'
+import { serverEntryPlugin } from './plugins/serverEntryPlugin.js'
 
 markEnvAsVite()
 
@@ -54,7 +54,7 @@ function plugin(vikeConfig?: ConfigVikeUserProvided): any {
     extensionsAssets(),
     baseUrls(vikeConfig),
     envVarsPlugin(),
-    ...serverEntry(vikeConfig)
+    ...serverEntryPlugin(vikeConfig)
   ]
 
   return plugins

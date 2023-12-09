@@ -23,7 +23,8 @@
     "esbuild": "^0.17.18",
     "fast-glob": "^3.2.12",
     "sirv": "^2.0.2",
-    "source-map-support": "^0.5.21"
+    "source-map-support": "^0.5.21",
+    "@vercel/nft": "^0.24.4"
   },
   "type": "module",
   "exports": {

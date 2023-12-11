@@ -1243,6 +1243,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.1.1
         version: 4.2.1(vite@4.5.1)
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
       express:
         specifier: ^4.18.2
         version: 4.18.2
@@ -1259,8 +1262,8 @@ importers:
         specifier: 0.32.x
         version: 0.32.6
       telefunc:
-        specifier: ^0.1.64
-        version: 0.1.64(@babel/core@7.23.5)(react@18.2.0)
+        specifier: 0.1.65
+        version: 0.1.65(@babel/core@7.23.5)(react@18.2.0)
       typescript:
         specifier: ^5.2.2
         version: 5.3.3
@@ -12513,8 +12516,8 @@ packages:
       ts-morph: 19.0.0
     dev: false
 
-  /telefunc@0.1.64(@babel/core@7.23.5)(react@18.2.0):
-    resolution: {integrity: sha512-Qbjz2FmmAk6DslB9m45FXXxVUZvNouPuP0yTMa1/z+YRHf0l8SEN04FAvzgEQtROOBcTpL2WBMU2gFCsFywwFQ==}
+  /telefunc@0.1.65(@babel/core@7.23.5)(react@18.2.0):
+    resolution: {integrity: sha512-S1H7C+wzLk9Yam7skqnMtkJgqOoKz/KJLBmrrGwFpaBjslWpaT+7pa9v41OtGslsO8MdMy5yt7O8nE6LlkcBlw==}
     engines: {node: '>=12.19.0'}
     peerDependencies:
       '@babel/core': ^7.0.0

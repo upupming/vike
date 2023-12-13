@@ -1,11 +1,11 @@
 export { importBuild }
 
 import type { Plugin, ResolvedConfig } from 'vite'
+import type { ConfigVikeUserProvided } from '../../../../shared/ConfigVike.js'
 import { importBuild as importBuild_ } from '@brillout/vite-plugin-import-build/plugin.js'
 import { getOutDirs, projectInfo, toPosixPath } from '../../utils.js'
 import path from 'path'
 import { createRequire } from 'module'
-import { ConfigVikeUserProvided } from '../../../../shared/ConfigVike.js'
 // @ts-ignore Shimed by dist-cjs-fixup.js for CJS build.
 const importMetaUrl: string = import.meta.url
 const require_ = createRequire(importMetaUrl)

@@ -5,11 +5,12 @@ import { importBuild as importBuild_ } from '@brillout/vite-plugin-import-build/
 import { getOutDirs, projectInfo, toPosixPath } from '../../utils.js'
 import path from 'path'
 import { createRequire } from 'module'
+import { ConfigVikeUserProvided } from '../../../../shared/ConfigVike.js'
 // @ts-ignore Shimed by dist-cjs-fixup.js for CJS build.
 const importMetaUrl: string = import.meta.url
 const require_ = createRequire(importMetaUrl)
 
-function importBuild(): Plugin[] {
+function importBuild(configVike?: ConfigVikeUserProvided): Plugin[] {
   let config: ResolvedConfig
   return [
     {
@@ -20,6 +21,7 @@ function importBuild(): Plugin[] {
       }
     },
     importBuild_({
+      disableAutoImporter: !!configVike?.server,
       getImporterCode: ({ findBuildEntry }) => {
         const pageFilesEntry = findBuildEntry('pageFiles')
         return getImporterCode(config, pageFilesEntry)
